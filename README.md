@@ -14,9 +14,11 @@ TURNSTILE_SECRET_TOKEN=
 You can get the site key and secret token values by adding your site to Cloudflare's [Turnstile page](https://dash.cloudflare.com/sign-up?to=/:account/turnstile).
 
 ## SSR
-The `verify.ts` API route in the `src/pages/api/` folder is not prefetched and requires you to have an SSR adapter. In this case, the SSR adapter used here is the Vercel adapter. 
+POST requests are not available for a static site, and thus, the `/verify` API route in the `src/pages/api/` folder is not prefetched and requires you to have an SSR adapter.
 
-If you want to use this template in a Node.js, Cloudflare, or other environment, check Astro's [SSR adapters page](https://docs.astro.build/en/guides/server-side-rendering/). 
+Only the API route requires SSR - the rest of the pages are prefetched using Astro's hybrid rendering feature!
+
+In this case, the SSR adapter used here is the Vercel adapter. If you want to use this template in a Node.js, Cloudflare, or other environment, check Astro's [SSR adapters page](https://docs.astro.build/en/guides/server-side-rendering/). 
 
 # Usage
 ## Commands
