@@ -38,12 +38,21 @@
 		body {
 			display: flex;
 			font-family: sans-serif, serif;
-			align-items: center;
 			justify-content: center;
 		}
 
 		textarea {
-			min-width: 470px;
+			min-width: 300px;
+		}
+
+		@media only screen and (min-width: 600px) {
+			body {
+				align-items: center;
+			}
+
+			textarea {
+				min-width: 470px;
+			}
 		}
 
 		body, form, form > div {
