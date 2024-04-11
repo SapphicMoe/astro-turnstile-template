@@ -1,6 +1,8 @@
 # Astro + Turnstile Template
 This is a template for integrating [Astro][astro] with [Cloudflare Turnstile][tailwindcss].
 
+You can view a demo of this template at [turnstile-demo.sapphic.moe](https://turnstile-demo.sapphic.moe).
+
 # Prerequisites
 
 ## Filling out values
