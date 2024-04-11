@@ -1,0 +1,58 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro + Turnstile Template</title>
+
+		<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer is:inline />
+	</head>
+
+	<body>
+		<h1>Astro + Turnstile Template</h1>
+
+		<form action="/api/verify" method="POST">
+			<div>
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" placeholder="John Doe" required />
+			</div>
+
+			<div>
+				<label for="message">Message:</label>
+				<textarea
+					id="message"
+					name="message"
+					placeholder="hi you're cute :3"
+					required
+				/>
+			</div>
+
+			<div class="cf-turnstile" data-sitekey={import.meta.env.TURNSTILE_SITE_KEY}></div>
+
+			<button type="submit">Submit</button>
+		</form>
+	</body>
+
+	<style>
+		body {
+			display: flex;
+			font-family: sans-serif, serif;
+			align-items: center;
+			justify-content: center;
+		}
+
+		textarea {
+			min-width: 470px;
+		}
+
+		body, form, form > div {
+			display: flex;
+			flex-direction: column;
+		}
+
+		form {
+			gap: 15px;
+		}
+	</style>
+</html>

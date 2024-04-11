@@ -1,0 +1,18 @@
+{
+  "name": "astro-turnstile-template",
+  "type": "module",
+  "license": "MIT",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.5.10",
+    "@astrojs/vercel": "^7.5.2",
+    "astro": "^4.5.17",
+    "typescript": "^5.4.4"
+  }
+}
